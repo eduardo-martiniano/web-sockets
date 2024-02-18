@@ -40,7 +40,7 @@ export class AppComponent {
 
   private createConnection() {
     this._hubConnection = new HubConnectionBuilder()
-      .withUrl('http://localhost:5198/brokerhub')
+      .withUrl('http://localhost:5000/brokerhub')
       .build();
   }
 
@@ -53,7 +53,7 @@ export class AppComponent {
         }
       })
       .catch(() => {
-        // setTimeout(function () { this.startConnection(); }, 5000);
+        setTimeout(() => { this.startConnection(); }, 5000);
       });
   }
 
